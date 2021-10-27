@@ -27,12 +27,12 @@ void LZ78(const string &s) {
             auto it = mp.find(ss);
             if (it == mp.end()) {//not found
 
-                    string new_s = ss;
-                    mp[ss] = m++;
-                    cmp[m-1]=ss;
-                    new_s.pop_back();
-                    Tag t(mp[new_s], ss[ss.size() - 1]);
-                    Tags.push_back(t);
+                string new_s = ss;
+                mp[ss] = m++;
+                cmp[m-1]=ss;
+                new_s.pop_back();
+                Tag t(mp[new_s], ss[ss.size() - 1]);
+                Tags.push_back(t);
 
                 i = j;
                 break;
